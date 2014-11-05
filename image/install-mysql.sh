@@ -25,7 +25,3 @@ cp /build-mysql/runit/mysql.sh /etc/service/mysql/run
 
 # clean up
 apt-get purge -y --auto-remove curl
-rm -rf /build-mysql/
-
-# cleanup from base image
-source /build/cleanup.sh

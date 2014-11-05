@@ -6,7 +6,7 @@ RUN mkdir /build-mysql
 ADD . /build-mysql
 
 RUN /build-mysql/install-mysql.sh && \
-	/build/cleanup.sh
+	/build/cleanup.sh && rm -rf /build-mysql/
 
 VOLUME  ["/var/log/mysql", "/var/lib/mysql"]
 EXPOSE 3306
